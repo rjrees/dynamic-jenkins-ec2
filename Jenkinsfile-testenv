@@ -1,0 +1,14 @@
+pipeline {
+ 
+    agent {node 'podman'}
+ 
+    stages {
+        stage('Creating Containers') {
+            steps {
+                script {
+                    sh 'initial.sh'
+                }
+            }
+        }
+    }
+}
